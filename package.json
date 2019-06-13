@@ -2,9 +2,9 @@
     "name": "@radoslaw-medryk/react-template",
     "private": true,
     "scripts": {
-        "build-dev": "mkdir -p dist && rm -r dist && npm run prettier-check && tsc && webpack --mode=production && cp configs/dev-config.json dist/config.json",
-        "build-prod": "mkdir -p dist && rm -r dist && npm run prettier-check && tsc && webpack --mode=production && cp configs/prod-config.json dist/config.json",
-        "deploy-prod": "npm run build-prod && npx firebase deploy --project <app_name>",
+        "build-dev": "rm -r dist && npm run prettier-check && tsc && webpack --mode=production && cp configs/dev-config.json dist/config.json",
+        "build-prod": "rm -r dist && npm run prettier-check && tsc && webpack --mode=production && cp configs/prod-config.json dist/config.json",
+        "deploy-prod": "npm run build-prod && npx firebase deploy --project url-scissors",
         "deploy-dev": "npm run build-dev && npx firebase deploy --project <dev_app_name>",
         "start": "webpack-dev-server",
         "lint:css": "stylelint src/**/*.tsx",
